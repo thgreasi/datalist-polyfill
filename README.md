@@ -1,6 +1,6 @@
 #Create a Datalist Polyfill in Minutes
 
-![logo image](http://ubuntuone.com/5uMFsYL236WQJxBlhQIeAm)
+![logo image](https://ubuntuone.com/5uMFsYL236WQJxBlhQIeAm)
 
 In this tutorial you will learn how to use HTML5 Datalists and also provide a fallback for older browsers. By the end of this article, you will create a highly customizable polyfill library to use for your projects.
 
@@ -34,7 +34,7 @@ Datalists introduced in HTML5, enhance your input tags, by providing suggestions
 
 In an ideal world, where all your site visitors prefer modern browsers, some lines of HTML code are enough to produce a nice autocomplete feature. Current versions of Firefox, Chrome and Opera, support Datalists but their Implementations differs. Firefox shows suggestions that contain the input text, in contrast with Chrome and Opera showing only those that begin with it.
 
-![native support image](http://ubuntuone.com/5KtxS4f4Iv3zun8XbmL7Fa)
+![native support image](https://ubuntuone.com/5KtxS4f4Iv3zun8XbmL7Fa)
 
 ---
 ##Step 2: *Supporting older browsers*
@@ -61,7 +61,7 @@ Some of them, including [IE 9](http://en.wikipedia.org/wiki/Internet_Explorer_9)
 ...
 ```
 
-![IE9 before and after image](http://ubuntuone.com/4I1Lxoo7PgPkiTkoV35Rz0)
+![IE9 before and after image](https://ubuntuone.com/4I1Lxoo7PgPkiTkoV35Rz0)
 
 As you can see, we give the select element a "display: none;" style, so that the select input is not displayed. Note that, browsers supporting HTML5 datalist, will just skip the select element and continue to function as supposed.
 
@@ -158,7 +158,7 @@ The main idea of a polyfill is that it runs only when a feature is missing from 
 
 The result, as you can see, is quite close to browsers with native support. Moreover you are free to style the appearence of the list with css or [jQuery ThemeRoller](http://jqueryui.com/themeroller/). Also note that depending on the size of your project, you might better be using libraries like [Modernizr](http://modernizr.com/) to detect the supporting features of a browser.
 
-![IE and safari](http://ubuntuone.com/0fypjvERWuHohD68CEYRUU)
+![IE and safari](https://ubuntuone.com/0fypjvERWuHohD68CEYRUU)
 
 The above javascript code could also (or better should) be placed in a seperate .js file. That way, just by including that file in any page (below its dependencies), you provide support to all datalists used in the page, no matter what browser the user is using.
 
@@ -167,7 +167,7 @@ The above javascript code could also (or better should) be placed in a seperate 
 
 In this step I'm going to use [Modernizr](http://modernizr.com/) for feature detection and conditional async loading of the polyfill. So first of all download a [custom build of Modernizr](http://modernizr.com/download/#-input-inputtypes-load) with (at least) "Input Attributes", "Input Types" and "Modernizr.load" checked, as shown below. I also like to include html5shiv so that html5 elements (like section, nav, header, footer and article) work on old browsers. Click Generate and Download the custom build, which will get a name like modernizr.custom.xxxxx.js (where xxxxx will be five random numbers).
 
-![Modernizr build](http://ubuntuone.com/0PyxDAMz4QM0MgjkUEmnNF)
+![Modernizr build](https://ubuntuone.com/0PyxDAMz4QM0MgjkUEmnNF)
 
 Using Modernizr makes feature detection much simpler and accurate. It also has built in [yepnope.js](http://yepnopejs.com/), to provide an easy conditional asyncronus loading of resources. To take advantage of the conditional loading, we first seperate the polyfill's logic from our html code, in a seperate DatalistPolyfill.js file. Your DatalistPolyfill.js file should look like this.
 
