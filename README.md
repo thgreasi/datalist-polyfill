@@ -45,7 +45,7 @@ Some of them, including [IE 9](http://en.wikipedia.org/wiki/Internet_Explorer_9)
 
 ```html
 ...
-<input type="text" name="color" id="color" value="" list="colorlist" />  
+<input type="text" name="color" id="color" value="" list="colorlist" />
 <datalist id="colorlist">
 	<select style="display: none;">
 		<option value="Black" />
@@ -81,7 +81,7 @@ I'm going to use the [jQuery UI autocomplete](http://jqueryui.com/demos/autocomp
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 </head>
 <body>
-	<input type="text" name="color" id="color" value="" list="colorlist" />  
+	<input type="text" name="color" id="color" value="" list="colorlist" />
 	<datalist id="colorlist">
 		<select style="display: none;">
 			<option value="Black" />
@@ -124,7 +124,7 @@ The main idea of a polyfill is that it runs only when a feature is missing from 
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 </head>
 <body>
-	<input type="text" name="color" id="color" value="" list="colorlist" />  
+	<input type="text" name="color" id="color" value="" list="colorlist" />
 	<datalist id="colorlist">
 		<select style="display: none;">
 			<option value="Black" />
@@ -204,7 +204,7 @@ Next, place DatalistPolyfill.js and modernizr.custom.xxxxx.js in a folder named 
 	</script>
 </head>
 <body>
-	<input type="text" name="color" id="color" value="" list="colorlist" />  
+	<input type="text" name="color" id="color" value="" list="colorlist" />
 	<datalist id="colorlist">
 		<select style="display: none;">
 			<option value="Black" />
