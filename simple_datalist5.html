@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Color Datalist</title>
+	<script src="js/modernizr.custom.95515.js"></script>
+	<script>
+		Modernizr.load([
+			'https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
+			{
+				test : Modernizr.input.list,
+				nope : ['https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css',
+						'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js',
+						'js/DatalistPolyfill.js']
+			}
+		]);
+	</script>
+</head>
+<body>
+	<input type="text" name="color" id="color" value="" list="colorlist" />  
+	<datalist id="colorlist">
+		<select style="display: none;">
+			<option value="Black" />
+			<option value="Blue" />
+			<option value="Dark Green" />
+			<option value="Grey" />
+			<option value="Green" />
+			<option value="Red" />
+			<option value="White" />
+			<option value="Yellow" />
+		</select>
+	</datalist>
+</body>
+</html>
