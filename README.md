@@ -39,9 +39,9 @@ In an ideal world, where all your site visitors prefer modern browsers, some lin
 ---
 ##Step 2: *Supporting older browsers*
 
-It's obvius that older browsers, without HTML5 support, will not give us the above result. You can easily check which browsers support Datalists at [caniuse.com](http://caniuse.com/datalist). To provide support for them, we will make a JavaScript pollyfill library.
+It's obvius that older browsers, without HTML5 support, will not give us the above result. You can easily check which browsers support Datalists at [caniuse.com](http://caniuse.com/datalist). To provide support for them, we will make a JavaScript polyfill library.
 
-Some of them, including [IE 9](http://en.wikipedia.org/wiki/Internet_Explorer_9), will **remove** the option elements that we placed inside the datalist. So our first step is to preserve the option elements. This can easily be accomblished by surrounding them with a select element, as shown below.
+Some of them, including [IE 9](http://en.wikipedia.org/wiki/Internet_Explorer_9), will **remove** the option elements that we placed inside the datalist. So our first step is to preserve the option elements. This can easily be accomplished by surrounding them with a select element, as shown below.
 
 ```html
 ...
@@ -106,12 +106,12 @@ I'm going to use the [jQuery UI autocomplete](http://jqueryui.com/demos/autocomp
 </html>
 ```
 
-As you can see, the code needed to initialize the autocomple widget is quite compact. We first create the list of suggestions by reading the datalist's options elements, and then call the autocomplete function on the desired input element inlcuding a the list as a parameter.
+As you can see, the code needed to initialize the autocomplete widget is quite compact. We first create the list of suggestions by reading the datalist's options elements, and then call the autocomplete function on the desired input element including a the list as a parameter.
 
 ---
 ##Step 4: *Turning it into a polyfill*
 
-The main idea of a polyfill is that it runs only when a feature is missing from a browser, letting modern browsers use their (faster) native implementation. The first line of the code below determines if there is support for HTML5 datalist. After that and only if support is absent, we initialize the autocomplete widget, for each input element of the page with the appropriate datelist.
+The main idea of a polyfill is that it runs only when a feature is missing from a browser, letting modern browsers use their (faster) native implementation. The first line of the code below determines if there is support for HTML5 datalist. After that and only if support is absent, we initialize the autocomplete widget, for each input element of the page with the appropriate datalist.
 
 ```html
 <!DOCTYPE html>
@@ -160,16 +160,16 @@ The result, as you can see, is quite close to browsers with native support. More
 
 ![IE and safari](https://raw.github.com/thgreasi/datalist-polyfill/master/img/IE_and_safari.png)
 
-The above javascript code could also (or better should) be placed in a seperate .js file. That way, just by including that file in any page (below its dependencies), you provide support to all datalists used in the page, no matter what browser the user is using.
+The above javascript code could also (or better should) be placed in a separate .js file. That way, just by including that file in any page (below its dependencies), you provide support to all datalists used in the page, no matter what browser the user is using.
 
 ---
 ##Step 5: *Conditional async loading with Modernizr (optional)*
 
-In this step I'm going to use [Modernizr](http://modernizr.com/) for feature detection and conditional async loading of the polyfill. So first of all download a [custom build of Modernizr](http://modernizr.com/download/#-input-inputtypes-load) with (at least) "Input Attributes", "Input Types" and "Modernizr.load" checked, as shown below. I also like to include html5shiv so that html5 elements (like section, nav, header, footer and article) work on old browsers. Click Generate and Download the custom build, which will get a name like modernizr.custom.xxxxx.js (where xxxxx will be five random numbers).
+In this step I'm going to use [Modernizr](http://modernizr.com/) for feature detection and conditional async loading of the polyfill. So first of all download a [custom build of Modernizr](http://modernizr.com/download/#-input-inputtypes-load) with (at least) "Input Attributes", "Input Types" and "Modernizr.load" checked, as shown below. I also like to include html5shiv so that HTML5 elements (like section, nav, header, footer and article) work on old browsers. Click Generate and Download the custom build, which will get a name like modernizr.custom.xxxxx.js (where xxxxx will be five random numbers).
 
 ![Modernizr build](https://raw.github.com/thgreasi/datalist-polyfill/master/img/Modernizr-build.png)
 
-Using Modernizr makes feature detection much simpler and accurate. It also has built in [yepnope.js](http://yepnopejs.com/), to provide an easy conditional asyncronus loading of resources. To take advantage of the conditional loading, we first seperate the polyfill's logic from our html code, in a seperate DatalistPolyfill.js file. Your DatalistPolyfill.js file should look like this.
+Using Modernizr makes feature detection much simpler and accurate. It also has built in [yepnope.js](http://yepnopejs.com/), to provide an easy conditional asynchronous loading of resources. To take advantage of the conditional loading, we first separate the polyfill's logic from our html code, in a separate DatalistPolyfill.js file. Your DatalistPolyfill.js file should look like this.
 
 ```js
 $(document).ready(function () {
@@ -222,7 +222,7 @@ Next, place DatalistPolyfill.js and modernizr.custom.xxxxx.js in a folder named 
 ```
 
 ###Finally note that:
-*   The above code will allways load jQuery.
+*   The above code will always load jQuery.
 *   Only when we need to polyfill datalist, it will also load jquery-ui.css, jquery-ui.min.js, and the polyfill's initialization script.
 *   Placing those scripts in the head element will benefit your performance, since the async loading will start as soon as possible.
 *   Since all the yepnope functionality can be accessed through Modernizr.load function, you might be interested reading this [tutorial of yepnope](http://net.tutsplus.com/tutorials/javascript-ajax/easy-script-loading-with-yepnope-js/).
