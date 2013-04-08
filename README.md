@@ -39,7 +39,7 @@ In an ideal world, where all your site visitors prefer modern browsers, some lin
 ---
 ##Step 2: *Supporting older browsers*
 
-It's obvius that older browsers, without HTML5 support, will not give us the above result. You can easily check which browsers support Datalists at [caniuse.com](http://caniuse.com/datalist). To provide support for them, we will make a JavaScript polyfill library.
+It's obvious that older browsers, without HTML5 support, will not give us the above result. You can easily check which browsers support Datalists at [caniuse.com](http://caniuse.com/datalist). To provide support for them, we will make a JavaScript polyfill library.
 
 Some of them, including [IE 9](http://en.wikipedia.org/wiki/Internet_Explorer_9), will **remove** the option elements that we placed inside the datalist. So our first step is to preserve the option elements. This can easily be accomplished by surrounding them with a select element, as shown below.
 
