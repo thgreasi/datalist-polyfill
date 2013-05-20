@@ -68,7 +68,7 @@ As you can see, we give the select element a "display: none;" style, so that the
 ---
 ##Step 3: *Include jQuery & jQuery UI*
 
-I'm going to use the [jQuery UI autocomplete](http://jqueryui.com/demos/autocomplete/) widget, which gives us an analogus behavior, is easy to use and yet very customizable. First of all we need to inlcude jQuery and jQuery UI javascript libraries in our page. You can download local copies of the libraries from [jquery.com](http://jquery.com) and [jqueryui.com](http://jqueryui.com/) or reference them directly from [Google's CDN](https://developers.google.com/speed/libraries/devguide) as I will demonstrate in my example code.
+I'm going to use the [jQuery UI autocomplete](http://jqueryui.com/demos/autocomplete/) widget, which gives us an analogous behavior, is easy to use and yet very customizable. First of all we need to include jQuery and jQuery UI javascript libraries in our page. You can download local copies of the libraries from [jquery.com](http://jquery.com) and [jqueryui.com](http://jqueryui.com/) or reference them directly from [Google's CDN](https://developers.google.com/speed/libraries/devguide) as I will demonstrate in my example code.
 
 ```html
 <!DOCTYPE html>
@@ -156,7 +156,7 @@ The main idea of a polyfill is that it runs only when a feature is missing from 
 </html>
 ```
 
-The result, as you can see, is quite close to browsers with native support. Moreover you are free to style the appearence of the list with css or [jQuery ThemeRoller](http://jqueryui.com/themeroller/). Also note that depending on the size of your project, you might better be using libraries like [Modernizr](http://modernizr.com/) to detect the supporting features of a browser.
+The result, as you can see, is quite close to browsers with native support. Moreover you are free to style the appearance of the list with css or [jQuery ThemeRoller](http://jqueryui.com/themeroller/). Also note that depending on the size of your project, you might better be using libraries like [Modernizr](http://modernizr.com/) to detect the supporting features of a browser.
 
 ![IE and safari](https://raw.github.com/thgreasi/datalist-polyfill/master/img/IE_and_safari.png)
 
